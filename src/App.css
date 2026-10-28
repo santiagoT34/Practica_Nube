@@ -1,0 +1,129 @@
+
+#root {
+  min-height: 100vh;
+}
+
+.contenedor {
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  box-sizing: border-box;
+  background:
+    radial-gradient(circle at top left, #49358c, transparent 45%),
+    radial-gradient(circle at bottom right, #126477, transparent 45%),
+    linear-gradient(135deg, #111329, #1c1c3d);
+  color: white;
+}
+
+.tarjeta {
+  width: 100%;
+  max-width: 560px;
+  padding: 55px 30px;
+  text-align: center;
+  box-sizing: border-box;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: aparecer 0.8s ease-out;
+}
+
+.etiqueta {
+  color: #c4b5fd;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+h1 {
+  margin: 28px 0 18px;
+  font-size: clamp(2.8rem, 9vw, 5rem);
+  font-weight: 800;
+  letter-spacing: -2px;
+}
+
+h1 span {
+  background: linear-gradient(90deg, #a5b4fc, #f0abfc, #67e8f9);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.linea {
+  width: 80px;
+  height: 4px;
+  margin: 0 auto 22px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #8b5cf6, #ec4899);
+}
+
+p {
+  color: #d1d5f0;
+  font-size: clamp(0.95rem, 3vw, 1.1rem);
+  line-height: 1.6;
+}
+
+.estado {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  margin-top: 20px;
+  padding: 11px 16px;
+  border: 1px solid rgba(52, 211, 153, 0.25);
+  border-radius: 30px;
+  background: rgba(52, 211, 153, 0.08);
+  color: #a7f3d0;
+  font-size: 0.85rem;
+}
+
+.punto {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #34d399;
+  box-shadow: 0 0 10px #34d399;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 480px) {
+  .contenedor {
+    padding: 16px;
+  }
+
+  .tarjeta {
+    padding: 42px 18px;
+    border-radius: 20px;
+  }
+
+  .etiqueta {
+    font-size: 0.7rem;
+    letter-spacing: 1.3px;
+  }
+
+  h1 {
+    letter-spacing: -1px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tarjeta {
+    animation: none;
+  }
+}
+
